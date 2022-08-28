@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TodosContext } from '../todo-context';
-import './todo-form.scss';
+import './todo-form.css';
 
 export const TodoForm = () => {
   const { todos, setTodos } = React.useContext(TodosContext);
@@ -24,7 +24,7 @@ export const TodoForm = () => {
         onChange={(e) => setTask(e.target.value)}
         onKeyUp={handleKeyUp}
       />
-      <button type="button" onClick={handleAddTodo}>
+      <button type="button"  data-testid="add-task" onClick={handleAddTodo}>
         Add task
       </button>
     </div>

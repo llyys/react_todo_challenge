@@ -10,11 +10,11 @@ afterEach(() => {
 });
 
 describe("TodoApp", () => {
-  test("Should update the count as expected when start button is clicked", () => {
+  test("Should update the count as expected when add-task button is clicked", () => {
+    // fix this test
     let { getByTestId } = renderApp();
-    let addButton = getByTestId("add-button");
+    let addButton = getByTestId("add-task-button");
     fireEvent.click(addButton);
-    fireEvent.click(addButton);
-    expect(getByTestId("output")).toHaveTextContent("You clicked 2 times ...");
+    expect(getByTestId("todo-results")).toHaveTextContent("DONE: 1");
   });
 });
